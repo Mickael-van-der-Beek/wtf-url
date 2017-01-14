@@ -6,7 +6,7 @@ const rfc3986Grammar = require('../grammars/rfc3986-grammar');
 const grammarUtils = require('../src/grammar-utils');
 const wtfUrl = require('../src/wtf-url');
 
-const url = require('url');
+const URI = require('urijs');
 
 const mergedGrammar = grammarUtils.mergeGrammars([
   rfc2234Grammar,
@@ -22,7 +22,7 @@ let i = 0;
 
 while ((next = generator.next()).value) {
   try {
-    new (url.URL)(next.value) && (parsed = true);
+    new (URI)(next.value) && (parsed = true);
   } catch (e) {
     parsed = false;
     console.error('ERROR=', e);

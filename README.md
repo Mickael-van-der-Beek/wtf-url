@@ -31,12 +31,12 @@ Currently only the following grammars exist:
 
 WTF URL uses the [ABNF](https://tools.ietf.org/html/rfc2234) grammar syle to describe formats.
 
-Each grammar is currently expressed as an intermediary representation object where the key is the token name and the value the token's ABNF AST.
+Each grammar is currently expressed as custom intermediary representation object where the key is the token name and the value the token's ABNF AST.
 
 Generators are used to cycle through each branch of the grammar generation process and return a result without storing them all in memory.
 
 Randomness plays an important role. Here are the types of nodes in a grammar that use random numbers:
 
-- ranges ($range), character who's code is in the range `[$range.from, $range.to]`
-- OR operators ($or), token who's index is in the range `[0, $range.$or.length - 1]`
-- quantifiers ($quantifier), number of repetitions for a token in the range `[$quantifier.min, $quantifier.max]`
+- ranges (`$range), character who's code is in the range `[$range.from, $range.to]`
+- OR operators (`$or), token who's index is in the range `[0, $range.$or.length - 1]`
+- quantifiers (`$quantifier), number of repetitions for a token in the range `[$quantifier.min, $quantifier.max]`
