@@ -40,3 +40,8 @@ Randomness plays an important role. Here are the types of nodes in a grammar tha
 - ranges (`$range`), character who's code is in the range `[$range.from, $range.to]`
 - OR operators (`$or`), token who's index is in the range `[0, $range.$or.length - 1]`
 - quantifiers (`$quantifier`), number of repetitions for a token in the range `[$quantifier.min, $quantifier.max]`
+
+## Todo list
+- Remove custom intermediary representation and replace by ABNF grammar parser followed by a transformation step into this custom intermediary representation
+- Add options to configure max repetitions, boundary checking, etc.
+- Add smart execution planner that skips grammar branches where the parsing results were all equal (100% fail / succcess)
