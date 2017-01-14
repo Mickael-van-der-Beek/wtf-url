@@ -37,6 +37,6 @@ Generators are used to cycle through each branch of the grammar generation proce
 
 Randomness plays an important role. Here are the types of nodes in a grammar that use random numbers:
 
-- ranges (`$range), character who's code is in the range `[$range.from, $range.to]`
-- OR operators (`$or), token who's index is in the range `[0, $range.$or.length - 1]`
-- quantifiers (`$quantifier), number of repetitions for a token in the range `[$quantifier.min, $quantifier.max]`
+- ranges (`$range`), character who's code is in the range `[$range.from, $range.to]`
+- OR operators (`$or`), token who's index is in the range `[0, $range.$or.length - 1]`
+- quantifiers (`$quantifier`), number of repetitions for a token in the range `[$quantifier.min, $quantifier.max]`
