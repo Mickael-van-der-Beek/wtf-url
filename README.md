@@ -4,11 +4,11 @@
 
 ## Description
 
-WTF URL is a URL fuzzer.
+WTF URL is a Node.js native WHATWG compliant URL constructor grammar based fuzzer.
 
 Based on grammars of this project, WTF URL generates random valid URLs.
 
-If you'd like to test other types of input, just follow the format described in the prexisting grammars and write your own grammar.
+Although it's first purpose is to fuzz URLs, you can fit it to generate any kinds of formats by writing and importing the corresponding grammar.
 
 ## Examples
 
@@ -20,16 +20,16 @@ $ node ./examples/fuzzing-whatwg-url.js
 
 ## Grammars
 
-You can find examples in the `./examples/` directory.
+You can find examples in the `./grammars/` directory.
 
 Currently only the following grammars exist:
 
-- (ABNF)[https://tools.ietf.org/html/rfc2234]
-- (URI)[https://tools.ietf.org/html/rfc3986]
+- [ABNF](https://tools.ietf.org/html/rfc2234)
+- [URI](https://tools.ietf.org/html/rfc3986)
 
 ## Implementation
 
-WTF URL uses the (ABNF)[https://tools.ietf.org/html/rfc2234] grammar syle to describe formats.
+WTF URL uses the [ABNF](https://tools.ietf.org/html/rfc2234) grammar syle to describe formats.
 
 Each grammar is currently expressed as an intermediary representation object where the key is the token name and the value the token's ABNF AST.
 
