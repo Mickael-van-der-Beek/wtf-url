@@ -1,0 +1,30 @@
+# Dot files
+.*
+
+# Git files
+!/.gitignore
+!/.gitmodules
+
+# Logs files
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# NPM dependency directory
+node_modules
+
+# Config files
+config/*
+!config/default.js
+!config/test.js
+
+# Env files
+env/*
+!/env/.env.default
+
+# Coverage directory
+coverage
